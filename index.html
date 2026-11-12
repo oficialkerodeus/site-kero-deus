@@ -42,7 +42,8 @@
   <link
     rel="preload"
     as="image"
-    href=""
+    href="capa-kero-deus.jpg"
+    type="image/jpeg"
     fetchpriority="high"
   >
 
@@ -458,7 +459,7 @@
 
     .hero-picture img {
       object-fit: cover;
-      object-position: center;
+      object-position: 58% center;
     }
 
     .hero-overlay {
@@ -466,9 +467,9 @@
       background:
         linear-gradient(
           135deg,
-          rgb(4 29 77 / 0.95),
-          rgb(7 87 189 / 0.82) 58%,
-          rgb(6 72 166 / 0.94)
+          rgb(4 29 77 / 0.78),
+          rgb(7 87 189 / 0.56) 58%,
+          rgb(6 72 166 / 0.76)
         );
     }
 
@@ -502,6 +503,13 @@
       padding-block: calc(var(--header-height) + 4rem) 4rem;
       color: var(--white);
       text-align: center;
+    }
+
+    .hero h1,
+    .hero-edition,
+    .hero-theme,
+    .hero-date {
+      text-shadow: 0 3px 18px rgb(4 29 77 / 0.78);
     }
 
     .marian-symbol {
@@ -1629,14 +1637,11 @@
       aria-labelledby="heroTitle"
     >
       <picture class="hero-picture">
-        <!--
-          Futuramente, substitua pela foto oficial da edição 2027.1.
-        -->
         <img
-          src="IMG_0142.jpg"
+          src="capa-kero-deus.jpg"
           alt=""
-          width="1920"
-          height="1080"
+          width="1024"
+          height="704"
           fetchpriority="high"
           decoding="async"
         >
@@ -2144,514 +2149,218 @@
 
           <h2 id="testimonialsTitle">O que é o Kero Deus?</h2>
 
-          <p>
-            Vidas que foram transformadas pelo Kero Deus!
-          </p>
+          <p>Vidas que foram transformadas pelo Kero Deus!</p>
         </header>
 
         <div class="testimonials-grid">
           <article class="testimonial-card">
             <div class="testimonial-author">
-              <img
-                src="davi.jpeg"
-                alt="Foto de Davi Araujo"
-                width="56"
-                height="56"
-                loading="lazy"
-              >
-
+              <img src="davi.jpeg" alt="Foto de Davi Araujo" width="56" height="56" loading="lazy">
               <div>
                 <cite>Davi Araujo</cite>
-                <div class="testimonial-rating" aria-label="5 estrelas">
-                  <span aria-hidden="true">★★★★★</span>
-                </div>
+                <div class="testimonial-rating" aria-label="5 estrelas"><span aria-hidden="true">★★★★★</span></div>
               </div>
             </div>
 
             <blockquote class="testimonial-summary">
-              “O Kero Deus é uma experiência tão incrível que se torna
-              única e especial em cada edição. É algo tão extraordinário
-              que nem conseguimos imaginar sua dimensão...”
+              “O Kero Deus é uma experiência tão incrível que se torna única e especial em cada edição. É algo tão extraordinário que nem conseguimos imaginar sua dimensão...”
             </blockquote>
 
-            <button
-              class="testimonial-read-more"
-              type="button"
-              data-testimonial-button
-              data-testimonial-name="Davi Araujo"
-              data-testimonial-image="davi.jpeg"
-            >
+            <button class="testimonial-read-more" type="button" data-testimonial-button data-testimonial-name="Davi Araujo" data-testimonial-image="davi.jpeg">
               Ler testemunho completo
             </button>
 
             <template data-testimonial-content>
-              <p>
-                O Kero Deus é uma experiência tão incrível que se torna
-                única e especial em cada edição. É algo tão extraordinário
-                que, muitas vezes, nem conseguimos imaginar a dimensão do
-                que é vivido ali. E o Kero Deus não é apenas um acampamento
-                ou retiro… é como um recomeço, uma nova oportunidade de
-                renovar a fé e escolher, todos os dias, querer mais de Deus.
-              </p>
+              <p>O Kero Deus é uma experiência tão incrível que se torna única e especial em cada edição. É algo tão extraordinário que, muitas vezes, nem conseguimos imaginar a dimensão do que é vivido ali. E o Kero Deus não é apenas um acampamento ou retiro… é como um recomeço, uma nova oportunidade de renovar a fé e escolher, todos os dias, querer mais de Deus.</p>
             </template>
           </article>
 
           <article class="testimonial-card">
             <div class="testimonial-author">
-              <img
-                src="valentina.jpeg"
-                alt="Foto de Valentina"
-                width="56"
-                height="56"
-                loading="lazy"
-              >
-
+              <img src="valentina.jpeg" alt="Foto de Valentina" width="56" height="56" loading="lazy">
               <div>
                 <cite>Valentina</cite>
-                <div class="testimonial-rating" aria-label="5 estrelas">
-                  <span aria-hidden="true">★★★★★</span>
-                </div>
+                <div class="testimonial-rating" aria-label="5 estrelas"><span aria-hidden="true">★★★★★</span></div>
               </div>
             </div>
 
             <blockquote class="testimonial-summary">
-              “Costumo dizer que viver o Kero Deus é como experimentar
-              um pedacinho do céu na Terra. São os melhores quatro dias,
-              em que Jesus encontra acesso ao nosso coração...”
+              “Costumo dizer que viver o Kero Deus é como experimentar um pedacinho do céu na Terra. São os melhores quatro dias, em que Jesus encontra acesso ao nosso coração...”
             </blockquote>
 
-            <button
-              class="testimonial-read-more"
-              type="button"
-              data-testimonial-button
-              data-testimonial-name="Valentina"
-              data-testimonial-image="valentina.jpeg"
-            >
+            <button class="testimonial-read-more" type="button" data-testimonial-button data-testimonial-name="Valentina" data-testimonial-image="valentina.jpeg">
               Ler testemunho completo
             </button>
 
             <template data-testimonial-content>
-              <p>
-                Costumo dizer que viver o Kero Deus é como experimentar
-                um pedacinho do céu na Terra. São os melhores quatro dias,
-                em que Jesus se utiliza de pequenas “desculpas” para ter
-                um verdadeiro acesso ao seu coração. Viver o meu primeiro
-                Kero Deus foi como ser curada de tudo aquilo que o mundo já
-                havia causado em mim. Foi a resposta que eu precisava para
-                me firmar na vida que, graças a Ele, tenho hoje: uma vida de
-                intimidade e de verdadeiro encontro com o amor de Deus.
-              </p>
-
-              <p>
-                Esta será a minha quinta edição no acampamento, e como é
-                bom ser uma jovem que busca incessantemente o amor de
-                Cristo, porque, a cada edição, Ele me encontra de uma
-                maneira diferente. “A melhor edição do Kero Deus sempre
-                será a próxima.”
-              </p>
+              <p>Costumo dizer que viver o Kero Deus é como experimentar um pedacinho do céu na Terra. São os melhores quatro dias, em que Jesus se utiliza de pequenas “desculpas” para ter um verdadeiro acesso ao seu coração. Viver o meu primeiro Kero Deus foi como ser curada de tudo aquilo que o mundo já havia causado em mim. Foi a resposta que eu precisava para me firmar na vida que, graças a Ele, tenho hoje: uma vida de intimidade e de verdadeiro encontro com o amor de Deus.</p>
+              <p>Esta será a minha quinta edição no acampamento, e como é bom ser uma jovem que busca incessantemente o amor de Cristo, porque, a cada edição, Ele me encontra de uma maneira diferente. “A melhor edição do Kero Deus sempre será a próxima.”</p>
             </template>
           </article>
 
           <article class="testimonial-card">
             <div class="testimonial-author">
-              <img
-                src="erik.jpeg"
-                alt="Foto de Erik Torres"
-                width="56"
-                height="56"
-                loading="lazy"
-              >
-
+              <img src="erik.jpeg" alt="Foto de Erik Torres" width="56" height="56" loading="lazy">
               <div>
                 <cite>Erik Torres</cite>
-                <div class="testimonial-rating" aria-label="5 estrelas">
-                  <span aria-hidden="true">★★★★★</span>
-                </div>
+                <div class="testimonial-rating" aria-label="5 estrelas"><span aria-hidden="true">★★★★★</span></div>
               </div>
             </div>
 
             <blockquote class="testimonial-summary">
-              “No meio da correria eu ouvi um chamado, suave como a brisa,
-              porém tão delicado. Era Deus me chamando para perto outra
-              vez, curando em silêncio...”
+              “No meio da correria eu ouvi um chamado, suave como a brisa, porém tão delicado. Era Deus me chamando pra perto outra vez, curando em silêncio...”
             </blockquote>
 
-            <button
-              class="testimonial-read-more"
-              type="button"
-              data-testimonial-button
-              data-testimonial-name="Erik Torres"
-              data-testimonial-image="erik.jpeg"
-            >
+            <button class="testimonial-read-more" type="button" data-testimonial-button data-testimonial-name="Erik Torres" data-testimonial-image="erik.jpeg">
               Ler testemunho completo
             </button>
 
             <template data-testimonial-content>
-              <p>
-                No meio da correria eu ouvi um chamado, suave como a brisa,
-                porém tão delicado. Era Deus me chamando pra perto outra
-                vez, curando em silêncio o que o mundo desfez.
-              </p>
-
-              <p>
-                Cheguei no Kero Deus com feridas no peito, sem saber qual
-                caminho parecia direito. Trazia tanta dor guardada no
-                coração e um vazio escondido na solidão.
-              </p>
-
-              <p>
-                Na Santa Missa, chorei diante do altar, não de tristeza,
-                mas por me encontrar. Vi no Corpo de Cristo o amor
-                verdadeiro, o abraço mais puro do Deus companheiro.
-              </p>
-
-              <p>
-                Na adoração, no silêncio e na paz, Deus foi curando tudo o
-                que ficou para trás. E aquilo que tanto pesava em meu peito
-                foi entregue nas mãos do Senhor perfeito.
-              </p>
-
-              <p>
-                O Kero Deus não foi só um acampamento, foi renovo de fé em
-                meio ao sofrimento. Foi Cristo mudando meu jeito de viver,
-                me mostrando que ainda vale a pena crer.
-              </p>
-
-              <p>
-                Voltei diferente daquele lugar, com mais esperança para
-                recomeçar. Porque quem encontra Jesus de verdade leva no
-                peito a paz da eternidade. Hoje sigo mais firme, segurando
-                minha cruz, pois descobri que minha força vem de Jesus. ✨
-              </p>
+              <p>No meio da correria eu ouvi um chamado, suave como a brisa, porém tão delicado. Era Deus me chamando pra perto outra vez, curando em silêncio o que o mundo desfez.</p>
+              <p>Cheguei no Kero Deus com feridas no peito, sem saber qual caminho parecia direito. Trazia tanta dor guardada no coração e um vazio escondido na solidão.</p>
+              <p>Na Santa Missa, chorei diante do altar, não de tristeza, mas por me encontrar. Vi no Corpo de Cristo o amor verdadeiro, o abraço mais puro do Deus companheiro.</p>
+              <p>Na adoração, no silêncio e na paz, Deus foi curando tudo o que ficou para trás. E aquilo que tanto pesava em meu peito foi entregue nas mãos do Senhor perfeito.</p>
+              <p>O Kero Deus não foi só um acampamento, foi renovo de fé em meio ao sofrimento. Foi Cristo mudando meu jeito de viver, me mostrando que ainda vale a pena crer.</p>
+              <p>Voltei diferente daquele lugar, com mais esperança para recomeçar. Porque quem encontra Jesus de verdade leva no peito a paz da eternidade. Hoje sigo mais firme, segurando minha cruz, pois descobri que minha força vem de Jesus. ✨</p>
             </template>
           </article>
 
           <article class="testimonial-card">
             <div class="testimonial-author">
-              <img
-                src="luiza.jpeg"
-                alt="Foto de Luiza Teofilo"
-                width="56"
-                height="56"
-                loading="lazy"
-              >
-
+              <img src="luiza.jpeg" alt="Foto de Luiza Teofilo" width="56" height="56" loading="lazy">
               <div>
                 <cite>Luiza Teofilo</cite>
-                <div class="testimonial-rating" aria-label="5 estrelas">
-                  <span aria-hidden="true">★★★★★</span>
-                </div>
+                <div class="testimonial-rating" aria-label="5 estrelas"><span aria-hidden="true">★★★★★</span></div>
               </div>
             </div>
 
             <blockquote class="testimonial-summary">
-              “O Kero Deus nunca foi apenas um acampamento. Ele é uma das
-              formas mais lindas que Deus encontrou para alcançar e salvar
-              corações...”
+              “O Kero Deus nunca foi apenas um acampamento. Ele é uma das formas mais lindas que Deus encontrou para alcançar e salvar corações...”
             </blockquote>
 
-            <button
-              class="testimonial-read-more"
-              type="button"
-              data-testimonial-button
-              data-testimonial-name="Luiza Teofilo"
-              data-testimonial-image="luiza.jpeg"
-            >
+            <button class="testimonial-read-more" type="button" data-testimonial-button data-testimonial-name="Luiza Teofilo" data-testimonial-image="luiza.jpeg">
               Ler testemunho completo
             </button>
 
             <template data-testimonial-content>
-              <p>
-                O Kero Deus nunca foi apenas um acampamento. Na verdade,
-                ele é uma das formas mais lindas que Deus encontrou para
-                alcançar e salvar corações. Cada momento vivido ali é
-                especial: a simplicidade nas pequenas coisas, a alegria
-                compartilhada e a constância de um amor que permanece.
-              </p>
-
-              <p>
-                É impossível não perceber o quanto esse acampamento já
-                transformou tantas histórias. O Kero Deus salvou minha
-                vida, continua salvando, salva muitas outras vidas e ainda
-                salvará tantas mais. Porque não se trata apenas de dias
-                vividos em um acampamento, mas de experiências que marcam
-                profundamente nossas vidas. É um lugar que nos faz sair da
-                rotina e nos adaptar a viver algo novo, nos aproxima de
-                momentos especiais com Deus e nos impulsiona a enxergar a
-                vida de uma maneira diferente.
-              </p>
-
-              <p>
-                Existe algo único naquele lugar, algo que faz cada abraço,
-                cada oração, cada conversa e cada sorriso terem um
-                significado maior. E talvez seja exatamente isso que torna
-                tudo tão especial: a presença de Deus sendo sentida na
-                simplicidade, no amor e na alegria de cada pessoa que faz
-                parte dessa caminhada. É IMPOSSÍVEL SAIR DESSA EXPERIÊNCIA
-                INCRÍVEL QUE É O KERO DEUS SEM SER TRANSFORMADO. ✨
-              </p>
+              <p>O Kero Deus nunca foi apenas um acampamento. Na verdade, ele é uma das formas mais lindas que Deus encontrou para alcançar e salvar corações. Cada momento vivido ali é especial: a simplicidade nas pequenas coisas, a alegria compartilhada e a constância de um amor que permanece.</p>
+              <p>É impossível não perceber o quanto esse acampamento já transformou tantas histórias. O Kero Deus salvou minha vida, continua salvando, salva muitas outras vidas e ainda salvará tantas mais. Porque não se trata apenas de dias vividos em um acampamento, mas de experiências que marcam profundamente nossas vidas. É um lugar que nos faz sair da rotina e nos adaptar a viver algo novo, nos aproxima de momentos especiais com Deus e nos impulsiona a enxergar a vida de uma maneira diferente.</p>
+              <p>Existe algo único naquele lugar, algo que faz cada abraço, cada oração, cada conversa e cada sorriso terem um significado maior. E talvez seja exatamente isso que torna tudo tão especial: a presença de Deus sendo sentida na simplicidade, no amor e na alegria de cada pessoa que faz parte dessa caminhada. É IMPOSSÍVEL SAIR DESSA EXPERIÊNCIA INCRÍVEL QUE É O KERO DEUS SEM SER TRANSFORMADO. ✨</p>
             </template>
           </article>
 
           <article class="testimonial-card">
             <div class="testimonial-author">
-              <img
-                src="isa.jpeg"
-                alt="Foto de Maria Isadora"
-                width="56"
-                height="56"
-                loading="lazy"
-              >
-
+              <img src="isa.jpeg" alt="Foto de Maria Isadora" width="56" height="56" loading="lazy">
               <div>
                 <cite>Maria Isadora</cite>
-                <div class="testimonial-rating" aria-label="5 estrelas">
-                  <span aria-hidden="true">★★★★★</span>
-                </div>
+                <div class="testimonial-rating" aria-label="5 estrelas"><span aria-hidden="true">★★★★★</span></div>
               </div>
             </div>
 
             <blockquote class="testimonial-summary">
-              “Minha experiência com o Kero Deus é simplesmente
-              inexplicável. O KD é renovação, confirmação e a oportunidade
-              que Deus me dá para recomeçar...”
+              “Minha experiência com o Kero Deus é simplesmente inexplicável. O KD é renovação, confirmação e a oportunidade que Deus me dá para recomeçar...”
             </blockquote>
 
-            <button
-              class="testimonial-read-more"
-              type="button"
-              data-testimonial-button
-              data-testimonial-name="Maria Isadora"
-              data-testimonial-image="isa.jpeg"
-            >
+            <button class="testimonial-read-more" type="button" data-testimonial-button data-testimonial-name="Maria Isadora" data-testimonial-image="isa.jpeg">
               Ler testemunho completo
             </button>
 
             <template data-testimonial-content>
-              <p>
-                Minha experiência com o Kero Deus é simplesmente
-                inexplicável. O KD é renovação, confirmação e a oportunidade
-                que Deus me dá para recomeçar. Eu amo o Kero Deus porque foi
-                lá que encontrei refúgio quando meu coração estava cansado.
-                Foi onde Deus me acolheu em Seus braços quando pensei que
-                não conseguiria continuar. O KD é meu porto seguro, onde
-                minhas lágrimas se transformam em oração e onde meu coração
-                encontra paz.
-              </p>
-
-              <p>
-                Há um sentimento inexplicável quando esses quatro dias
-                chegam. É como se o céu beijasse a Terra e tudo dentro de
-                mim voltasse a fazer sentido. Esses quatro dias mudaram
-                minha vida para sempre e, principalmente, a forma como eu
-                amo. O Kero Deus não é apenas um retiro, mas um verdadeiro
-                encontro com o amor de Deus. 💙
-              </p>
+              <p>Minha experiência com o Kero Deus é simplesmente inexplicável. O KD é renovação, confirmação e a oportunidade que Deus me dá para recomeçar. Eu amo o Kero Deus porque foi lá que encontrei refúgio quando meu coração estava cansado. Foi onde Deus me acolheu em Seus braços quando pensei que não conseguiria continuar. O KD é meu porto seguro, onde minhas lágrimas se transformam em oração e onde meu coração encontra paz.</p>
+              <p>Há um sentimento inexplicável quando esses quatro dias chegam. É como se o céu beijasse a Terra e tudo dentro de mim voltasse a fazer sentido. Esses quatro dias mudaram minha vida para sempre e, principalmente, a forma como eu amo. O Kero Deus não é apenas um retiro, mas um verdadeiro encontro com o amor de Deus. 💙</p>
             </template>
           </article>
 
           <article class="testimonial-card">
             <div class="testimonial-author">
-              <img
-                src="joão.PNG"
-                alt="Foto de João"
-                width="56"
-                height="56"
-                loading="lazy"
-              >
-
+              <img src="joão.PNG" alt="Foto de João" width="56" height="56" loading="lazy">
               <div>
                 <cite>João</cite>
-                <div class="testimonial-rating" aria-label="5 estrelas">
-                  <span aria-hidden="true">★★★★★</span>
-                </div>
+                <div class="testimonial-rating" aria-label="5 estrelas"><span aria-hidden="true">★★★★★</span></div>
               </div>
             </div>
 
             <blockquote class="testimonial-summary">
-              “O Kero Deus é salvação, foi salvação e continua sendo vida!
-              Uma pequena estrofe é pouco para descrever o Kero Deus...”
+              “O Kero Deus é salvação, foi salvação e continua sendo vida! Uma pequena estrofe é pouco para descrever o Kero Deus...”
             </blockquote>
 
-            <button
-              class="testimonial-read-more"
-              type="button"
-              data-testimonial-button
-              data-testimonial-name="João"
-              data-testimonial-image="joão.PNG"
-            >
+            <button class="testimonial-read-more" type="button" data-testimonial-button data-testimonial-name="João" data-testimonial-image="joão.PNG">
               Ler testemunho completo
             </button>
 
             <template data-testimonial-content>
-              <p>
-                O Kero Deus é salvação, foi salvação e continua sendo vida!
-                Uma pequena estrofe é pouco para descrever o Kero Deus. Foi
-                o retiro que me salvou e me fez permanecer firme até hoje.
-                Não sei expressar em palavras como o Kero Deus faz você se
-                sentir mais próximo de Deus.
-              </p>
-
-              <p>
-                Quem tiver a oportunidade de viver essa experiência, DEVE
-                viver. É algo único, transformador e inesquecível! CUIDAAAA
-                NESSE KERO DEUSSS! 🔥✨
-              </p>
+              <p>O Kero Deus é salvação, foi salvação e continua sendo vida! Uma pequena estrofe é pouco para descrever o Kero Deus. Foi o retiro que me salvou e me fez permanecer firme até hoje. Não sei expressar em palavras como o Kero Deus faz você se sentir mais próximo de Deus.</p>
+              <p>Quem tiver a oportunidade de viver essa experiência, DEVE viver. É algo único, transformador e inesquecível! CUIDAAAA NESSE KERO DEUSSS! 🔥✨</p>
             </template>
           </article>
 
           <article class="testimonial-card">
             <div class="testimonial-author">
-              <img
-                src="lavi.jpeg"
-                alt="Foto de Lavi"
-                width="56"
-                height="56"
-                loading="lazy"
-              >
-
+              <img src="lavi.jpeg" alt="Foto de Lavi" width="56" height="56" loading="lazy">
               <div>
                 <cite>Lavi</cite>
-                <div class="testimonial-rating" aria-label="5 estrelas">
-                  <span aria-hidden="true">★★★★★</span>
-                </div>
+                <div class="testimonial-rating" aria-label="5 estrelas"><span aria-hidden="true">★★★★★</span></div>
               </div>
             </div>
 
             <blockquote class="testimonial-summary">
-              “Eu amo o Kero Deus porque foi n’Ele que encontrei meu
-              verdadeiro lar. Quem carrega Cristo está destinado a viver o
-              extraordinário. ✨”
+              “Eu amo o Kero Deus porque foi n’Ele que encontrei meu verdadeiro lar. Quem carrega Cristo está destinado a viver o extraordinário. ✨”
             </blockquote>
 
-            <button
-              class="testimonial-read-more"
-              type="button"
-              data-testimonial-button
-              data-testimonial-name="Lavi"
-              data-testimonial-image="lavi.jpeg"
-            >
+            <button class="testimonial-read-more" type="button" data-testimonial-button data-testimonial-name="Lavi" data-testimonial-image="lavi.jpeg">
               Ler testemunho completo
             </button>
 
             <template data-testimonial-content>
-              <p>
-                Eu amo o Kero Deus porque foi n’Ele que encontrei meu
-                verdadeiro lar. E quem carrega Cristo de verdade está
-                destinado a viver o extraordinário. ✨
-              </p>
+              <p>Eu amo o Kero Deus porque foi n’Ele que encontrei meu verdadeiro lar. E quem carrega Cristo de verdade está destinado a viver o extraordinário. ✨</p>
             </template>
           </article>
 
           <article class="testimonial-card">
             <div class="testimonial-author">
-              <img
-                src="pedro.jpeg"
-                alt="Foto de Pedro Melo"
-                width="56"
-                height="56"
-                loading="lazy"
-              >
-
+              <img src="pedro.jpeg" alt="Foto de Pedro Melo" width="56" height="56" loading="lazy">
               <div>
                 <cite>Pedro Melo</cite>
-                <div class="testimonial-rating" aria-label="5 estrelas">
-                  <span aria-hidden="true">★★★★★</span>
-                </div>
+                <div class="testimonial-rating" aria-label="5 estrelas"><span aria-hidden="true">★★★★★</span></div>
               </div>
             </div>
 
             <blockquote class="testimonial-summary">
-              “Para mim, o Kero Deus significa salvação, alegria e um
-              verdadeiro encontro com Deus. Não tenho palavras suficientes
-              para descrever essa experiência...”
+              “Para mim, o Kero Deus significa salvação, alegria e um verdadeiro encontro com Deus. Não tenho palavras suficientes para descrever essa experiência...”
             </blockquote>
 
-            <button
-              class="testimonial-read-more"
-              type="button"
-              data-testimonial-button
-              data-testimonial-name="Pedro Melo"
-              data-testimonial-image="pedro.jpeg"
-            >
+            <button class="testimonial-read-more" type="button" data-testimonial-button data-testimonial-name="Pedro Melo" data-testimonial-image="pedro.jpeg">
               Ler testemunho completo
             </button>
 
             <template data-testimonial-content>
-              <p>
-                Para mim, o Kero Deus significa salvação, alegria e um
-                verdadeiro encontro com Deus. Não tenho palavras suficientes
-                para descrever o que é o Kero Deus, porque só quem vive sabe
-                o quão extraordinário ele é. É uma das experiências mais
-                únicas que existem: ter um encontro verdadeiro com Deus e
-                sentir Seu amor de forma tão intensa.
-              </p>
-
-              <p>
-                Então, se você tiver a oportunidade de viver isso, viva!
-                Porque é uma das melhores experiências que alguém pode ter
-                na vida. Simbora nesse Kero Deus! ✨
-              </p>
+              <p>Para mim, o Kero Deus significa salvação, alegria e um verdadeiro encontro com Deus. Não tenho palavras suficientes para descrever o que é o Kero Deus, porque só quem vive sabe o quão extraordinário ele é. É uma das experiências mais únicas que existem: ter um encontro verdadeiro com Deus e sentir Seu amor de forma tão intensa.</p>
+              <p>Então, se você tiver a oportunidade de viver isso, viva! Porque é uma das melhores experiências que alguém pode ter na vida. Simbora nesse Kero Deus! ✨</p>
             </template>
           </article>
 
           <article class="testimonial-card">
             <div class="testimonial-author">
-              <img
-                src="guilherme.jpeg"
-                alt="Foto de Guilherme"
-                width="56"
-                height="56"
-                loading="lazy"
-              >
-
+              <img src="guilherme.jpeg" alt="Foto de Guilherme" width="56" height="56" loading="lazy">
               <div>
                 <cite>Guilherme</cite>
-                <div class="testimonial-rating" aria-label="5 estrelas">
-                  <span aria-hidden="true">★★★★★</span>
-                </div>
+                <div class="testimonial-rating" aria-label="5 estrelas"><span aria-hidden="true">★★★★★</span></div>
               </div>
             </div>
 
             <blockquote class="testimonial-summary">
-              “O Kero Deus, para mim, é muito mais do que um retiro. É como
-              se fosse meu lar, o lugar onde meu coração finalmente encontra
-              paz...”
+              “O Kero Deus, para mim, é muito mais do que um retiro. É como se fosse meu lar, o lugar onde meu coração finalmente encontra paz...”
             </blockquote>
 
-            <button
-              class="testimonial-read-more"
-              type="button"
-              data-testimonial-button
-              data-testimonial-name="Guilherme"
-              data-testimonial-image="guilherme.jpeg"
-            >
+            <button class="testimonial-read-more" type="button" data-testimonial-button data-testimonial-name="Guilherme" data-testimonial-image="guilherme.jpeg">
               Ler testemunho completo
             </button>
 
             <template data-testimonial-content>
-              <p>
-                O Kero Deus, para mim, é muito mais do que um retiro. É como
-                se fosse meu lar, o lugar onde meu coração finalmente
-                encontra paz. São quatro dias que passam rápido, mas deixam
-                marcas eternas dentro de mim.
-              </p>
-
-              <p>
-                É impossível explicar completamente tudo o que sinto vivendo
-                cada momento ali. O agir de Deus é tão forte e tão presente
-                nas músicas, nas pregações, nas brincadeiras e até nos
-                momentos mais simples de fraternidade.
-              </p>
-
-              <p>
-                O que torna o KD tão essencial para mim é que lá eu me
-                reencontro. No silêncio e na partilha, Deus me lembra de quem
-                eu realmente sou. Cada edição traz uma nova história, um
-                toque diferente e uma experiência única, mas todas terminam
-                com a mesma certeza reconfortante: a de que ali eu sempre
-                estarei em casa. ✨
-              </p>
+              <p>O Kero Deus, para mim, é muito mais do que um retiro. É como se fosse meu lar, o lugar onde meu coração finalmente encontra paz. São quatro dias que passam rápido, mas deixam marcas eternas dentro de mim.</p>
+              <p>É impossível explicar completamente tudo o que sinto vivendo cada momento ali. O agir de Deus é tão forte e tão presente nas músicas, nas pregações, nas brincadeiras e até nos momentos mais simples de fraternidade.</p>
+              <p>O que torna o KD tão essencial para mim é que lá eu me reencontro. No silêncio e na partilha, Deus me lembra de quem eu realmente sou. Cada edição traz uma nova história, um toque diferente e uma experiência única, mas todas terminam com a mesma certeza reconfortante: a de que ali eu sempre estarei em casa. ✨</p>
             </template>
           </article>
         </div>
@@ -2666,35 +2375,18 @@
     >
       <div class="testimonial-dialog-content">
         <form method="dialog">
-          <button
-            class="testimonial-dialog-close"
-            type="submit"
-            aria-label="Fechar testemunho"
-          >
-            ×
-          </button>
+          <button class="testimonial-dialog-close" type="submit" aria-label="Fechar testemunho">×</button>
         </form>
 
         <div class="testimonial-dialog-author">
-          <img
-            id="testimonialDialogImage"
-            alt=""
-            width="56"
-            height="56"
-          >
-
+          <img id="testimonialDialogImage" alt="" width="56" height="56">
           <div>
             <h3 id="testimonialDialogTitle">Testemunho</h3>
-            <div class="testimonial-rating" aria-label="5 estrelas">
-              <span aria-hidden="true">★★★★★</span>
-            </div>
+            <div class="testimonial-rating" aria-label="5 estrelas"><span aria-hidden="true">★★★★★</span></div>
           </div>
         </div>
 
-        <div
-          id="testimonialDialogText"
-          class="testimonial-dialog-text"
-        ></div>
+        <div id="testimonialDialogText" class="testimonial-dialog-text"></div>
       </div>
     </dialog>
 
@@ -3031,7 +2723,7 @@
       ];
 
       const registrationMessage =
-        "Olá! Quero fazer minha inscrição no Kero Deus 2027.1!";
+        "Olá! Quero fazer minha inscrição no Kero Deus 2027.1, de 7 a 10 de janeiro de 2027.";
 
       document
         .querySelectorAll("[data-contact-card]")
