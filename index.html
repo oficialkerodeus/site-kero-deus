@@ -198,7 +198,7 @@
     .button-outline { border-color: var(--blue-primary); color: var(--blue-primary); background: transparent; }
     .button-outline:hover { background: var(--blue-primary); color: var(--white); }
 
-    /* Hero (Estilo Cartaz) */
+    /* Hero com Imagem de Capa */
     .hero {
       position: relative; min-height: max(45rem, 100svh);
       display: grid; place-items: center; overflow: hidden;
@@ -206,22 +206,55 @@
       padding-top: var(--header-height);
     }
 
+    /* Configuração da Imagem de Capa */
+    .hero-picture,
+    .hero-picture img,
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-picture {
+      z-index: -4;
+    }
+
+    .hero-picture img {
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* Overlay claro para manter a legibilidade dos textos escuros sobre a foto */
+    .hero-overlay {
+      z-index: -3;
+      background: linear-gradient(
+        135deg,
+        rgb(242 240 235 / 0.90),
+        rgb(242 240 235 / 0.75) 50%,
+        rgb(242 240 235 / 0.90)
+      );
+      backdrop-filter: blur(3px);
+    }
+
     /* Textura quadriculada sutil no fundo */
     .hero::before {
-      position: absolute; inset: 0; z-index: -1;
+      position: absolute; inset: 0; z-index: -2;
       background-image: 
         linear-gradient(90deg, var(--blue-primary) 1px, transparent 1px),
         linear-gradient(var(--blue-primary) 1px, transparent 1px);
       background-size: 40px 40px;
-      content: ""; opacity: 0.03;
-      mask-image: radial-gradient(circle at center, black, transparent 70%);
-      -webkit-mask-image: radial-gradient(circle at center, black, transparent 70%);
+      content: ""; opacity: 0.04;
+      mask-image: radial-gradient(circle at center, black, transparent 80%);
+      -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
     }
 
     .hero-content {
       max-width: 62rem; padding-block: 2rem 4rem;
       color: var(--black-deep); text-align: center;
       display: flex; flex-direction: column; align-items: center;
+      position: relative;
+      z-index: 1;
     }
 
     .marian-symbol {
@@ -526,6 +559,12 @@
   <main id="conteudo">
     <!-- Início -->
     <section id="inicio" class="hero" aria-labelledby="heroTitle">
+      <!-- Imagem de capa restaurada aqui -->
+      <picture class="hero-picture">
+        <img src="capa-kero-deus.jpg" alt="" width="1024" height="704" fetchpriority="high" decoding="async">
+      </picture>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
       <div class="container hero-content">
         <img class="marian-symbol" src="logo-kero-deus.png" alt="" width="512" height="512" aria-hidden="true">
 
