@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="O Kero Deus 2027.1 será revelado em 13 de novembro de 2026, às 21h00, no horário do Ceará.">
   <meta name="author" content="Kero Deus">
-  <meta name="theme-color" content="#0021db">
+  <meta name="theme-color" content="#5892dc">
 
   <meta property="og:title" content="Kero Deus 2027.1">
   <meta property="og:description" content="O tema e as informações da nova edição serão revelados em 13 de novembro de 2026, às 21h00.">
@@ -30,23 +30,23 @@
     :root {
       color-scheme: light;
 
-      /* Paleta expandida com azul */
+      /* Paleta atualizada com o Azul Celeste (#5892dc) */
       --bg-paper: #f2f0eb; 
       --bg-paper-dark: #e8e5df;
-      --blue-soft: #eef2ff; 
+      --blue-soft: #eaf2fb; /* Fundo azulado super suave */
       
-      --blue-primary: #0021db; 
-      --blue-hover: #0018a8;
-      --blue-dark: #00148a;
+      --blue-primary: #5892dc; /* NOVO AZUL DA IMAGEM */
+      --blue-hover: #3a78c9;   /* Azul mais escuro para passar o mouse */
+      --blue-dark: #285b9b;    /* Azul escuro para textos de destaque */
       
       --black-deep: #111111;
       --gray-text: #4a4a4a;
       --border-light: #d1cdc4;
-      --border-blue: #c2cbef;
+      --border-blue: #c3d6f0; /* Borda azulada suave */
       --white: #ffffff;
 
-      --whatsapp: #0021db;
-      --whatsapp-hover: #0018a8;
+      --whatsapp: #5892dc;
+      --whatsapp-hover: #3a78c9;
 
       --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
       --font-serif: "Playfair Display", Georgia, serif;
@@ -59,9 +59,9 @@
       --radius-medium: 0.5rem;
       --radius-large: 1rem;
 
-      --shadow-small: 0 4px 12px rgb(0 0 0 / 0.05);
-      --shadow-medium: 0 10px 30px rgb(0 33 219 / 0.08);
-      --shadow-large: 0 20px 50px rgb(0 33 219 / 0.15);
+      --shadow-small: 0 4px 12px rgb(88 146 220 / 0.08);
+      --shadow-medium: 0 10px 30px rgb(88 146 220 / 0.15);
+      --shadow-large: 0 20px 50px rgb(88 146 220 / 0.25);
     }
 
     *, *::before, *::after { box-sizing: border-box; }
@@ -195,7 +195,7 @@
     .button:hover { transform: translateY(-2px); }
 
     .button-primary {
-      background: var(--blue-primary); color: var(--white); box-shadow: 0 8px 20px rgb(0 33 219 / 0.2);
+      background: var(--blue-primary); color: var(--white); box-shadow: 0 8px 20px rgb(88 146 220 / 0.3);
     }
     .button-primary:hover { background: var(--blue-hover); }
 
@@ -224,34 +224,33 @@
     .hero-picture img { 
       object-fit: cover; 
       object-position: center; 
-      /* A imagem está totalmente nítida, sem filtros */
     }
 
-    /* Sobreposição azulada SUAVE (Apenas um tom, sem blur) */
+    /* Sobreposição azulada SUAVE (Puxando para o #5892dc) */
     .hero-overlay {
       z-index: -3;
       background: linear-gradient(
         135deg,
-        rgba(238, 242, 255, 0.45), /* Azul bem clarinho e transparente */
-        rgba(230, 240, 255, 0.20) 50%,
-        rgba(238, 242, 255, 0.50)
+        rgba(234, 242, 251, 0.40), 
+        rgba(234, 242, 251, 0.20) 50%,
+        rgba(234, 242, 251, 0.45)
       );
     }
 
-    /* Efeito de Céu Estrelado (CSS Puro) por cima da imagem */
+    /* Efeito de Céu Estrelado (CSS Puro) */
     .hero::after {
       position: absolute;
       inset: 0;
       z-index: -1;
       content: "";
       background-image: 
-        radial-gradient(1.5px 1.5px at 10% 20%, rgba(0, 33, 219, 0.5) 50%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 10% 20%, rgba(88, 146, 220, 0.6) 50%, transparent 100%),
         radial-gradient(1px 1px at 30% 60%, rgba(255, 255, 255, 0.9) 50%, transparent 100%),
-        radial-gradient(2px 2px at 70% 30%, rgba(0, 33, 219, 0.4) 50%, transparent 100%),
+        radial-gradient(2px 2px at 70% 30%, rgba(88, 146, 220, 0.5) 50%, transparent 100%),
         radial-gradient(1.5px 1.5px at 90% 80%, rgba(255, 255, 255, 0.8) 50%, transparent 100%),
-        radial-gradient(1px 1px at 50% 10%, rgba(0, 33, 219, 0.6) 50%, transparent 100%),
+        radial-gradient(1px 1px at 50% 10%, rgba(88, 146, 220, 0.7) 50%, transparent 100%),
         radial-gradient(2px 2px at 20% 90%, rgba(255, 255, 255, 0.8) 50%, transparent 100%),
-        radial-gradient(1.5px 1.5px at 80% 50%, rgba(175, 194, 221, 0.9) 50%, transparent 100%);
+        radial-gradient(1.5px 1.5px at 80% 50%, rgba(195, 214, 240, 0.9) 50%, transparent 100%);
       background-repeat: repeat;
       background-size: 350px 350px;
       opacity: 0.8;
@@ -266,7 +265,7 @@
         linear-gradient(90deg, var(--blue-primary) 1px, transparent 1px),
         linear-gradient(var(--blue-primary) 1px, transparent 1px);
       background-size: 40px 40px;
-      content: ""; opacity: 0.03;
+      content: ""; opacity: 0.04;
       mask-image: radial-gradient(circle at center, black, transparent 80%);
       -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
       pointer-events: none;
@@ -287,7 +286,7 @@
 
     .marian-symbol {
       width: clamp(5.5rem, 9vw, 7rem); height: auto; margin: 0 auto 1rem;
-      object-fit: contain; filter: drop-shadow(0 10px 20px rgba(0, 33, 219, 0.25));
+      object-fit: contain; filter: drop-shadow(0 10px 20px rgba(88, 146, 220, 0.3));
     }
 
     .edition-badge {
@@ -295,10 +294,10 @@
       border: 1px solid var(--blue-primary); border-radius: 999px;
       background: var(--white); color: var(--blue-primary); font-size: 0.8rem;
       font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-      box-shadow: 0 4px 10px rgba(0, 33, 219, 0.1);
+      box-shadow: 0 4px 10px rgba(88, 146, 220, 0.15);
     }
 
-    /* Título Caligráfico com brilho branco para destacar do fundo */
+    /* Título Caligráfico */
     .hero h1 {
       margin-bottom: -1rem;
       font-family: var(--font-script);
@@ -307,7 +306,7 @@
       color: var(--blue-primary); letter-spacing: 0;
       text-shadow: 
         0 0 25px rgba(255, 255, 255, 1),
-        0 10px 20px rgba(0, 33, 219, 0.2);
+        0 10px 20px rgba(88, 146, 220, 0.25);
     }
 
     /* Painel de Lançamento */
@@ -389,19 +388,19 @@
 
     /* Tema Section */
     .theme-section .section-header h2 { color: var(--white); }
-    .theme-section .section-header p { color: rgba(255, 255, 255, 0.8); }
+    .theme-section .section-header p { color: rgba(255, 255, 255, 0.9); }
     .theme-section .section-label { color: var(--blue-primary); background: var(--white); border-color: var(--white); }
 
-    .theme-introduction { max-width: 54rem; margin: 0 auto 3rem; color: rgba(255, 255, 255, 0.9); font-size: 1.1rem; text-align: center; }
+    .theme-introduction { max-width: 54rem; margin: 0 auto 3rem; color: rgba(255, 255, 255, 0.95); font-size: 1.1rem; text-align: center; }
     .theme-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 
-    .theme-card { padding: 2rem 1.5rem; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: var(--radius-medium); background: rgba(0, 0, 0, 0.15); }
+    .theme-card { padding: 2rem 1.5rem; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: var(--radius-medium); background: rgba(0, 0, 0, 0.1); }
     .theme-card-icon { display: grid; width: 3rem; height: 3rem; margin-bottom: 1rem; place-items: center; border: 1px solid var(--white); border-radius: 50%; color: var(--white); font-size: 1.35rem; }
     .theme-card h3 { margin-bottom: 0.75rem; color: var(--white); font-family: var(--font-serif); font-size: 1.4rem; }
-    .theme-card p { color: rgba(255, 255, 255, 0.8); margin-bottom: 0; }
+    .theme-card p { color: rgba(255, 255, 255, 0.9); margin-bottom: 0; }
 
     .biblical-quote { max-width: 48rem; margin: 3rem auto 0; padding: 2rem; border-top: 2px solid var(--white); border-bottom: 2px solid var(--white); background: transparent; color: var(--white); font-family: var(--font-serif); font-size: clamp(1.3rem, 3vw, 1.8rem); font-style: italic; text-align: center; }
-    .biblical-quote cite { display: block; margin-top: 1rem; color: rgba(255, 255, 255, 0.7); font-family: var(--font-sans); font-size: 0.85rem; font-style: normal; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+    .biblical-quote cite { display: block; margin-top: 1rem; color: rgba(255, 255, 255, 0.8); font-family: var(--font-sans); font-size: 0.85rem; font-style: normal; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
 
     /* Inscrições */
     .contacts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 58rem; margin-inline: auto; }
@@ -464,7 +463,7 @@
       border-radius: var(--radius-medium); background: var(--white); color: var(--gray-text);
       box-shadow: var(--shadow-large);
     }
-    .testimonial-dialog::backdrop { background: rgb(0 33 219 / 0.4); backdrop-filter: blur(4px); }
+    .testimonial-dialog::backdrop { background: rgb(88 146 220 / 0.4); backdrop-filter: blur(4px); }
     .testimonial-dialog-content { position: relative; max-height: min(48rem, calc(100dvh - 2rem)); padding: clamp(1.5rem, 5vw, 2.5rem); overflow-y: auto; }
     .testimonial-dialog-close { position: absolute; top: 1rem; right: 1rem; display: grid; width: 2.5rem; height: 2.5rem; place-items: center; border: 1px solid var(--border-blue); border-radius: 50%; background: var(--blue-soft); color: var(--blue-primary); cursor: pointer; font-size: 1.4rem; }
     .testimonial-dialog-author { display: flex; align-items: center; gap: 1rem; margin-right: 3rem; margin-bottom: 1.5rem; }
@@ -501,12 +500,12 @@
     .location-item p { margin-bottom: 0; }
     .location-action { margin-top: 1.5rem; }
 
-    /* Rodapé - Azul Royal */
+    /* Rodapé - Azul Principal */
     .site-footer { padding-block: 4rem; background: var(--blue-primary); color: var(--white); text-align: center; }
     .footer-symbol { width: 4rem; height: 4rem; margin: 0 auto 1rem; object-fit: contain; filter: brightness(0) invert(1); }
     .footer-brand { margin-bottom: 0.5rem; color: var(--white); font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; letter-spacing: 0.05em; }
-    .footer-theme { margin-bottom: 1.5rem; color: rgba(255,255,255,0.8); font-family: var(--font-serif); font-style: italic; }
-    .footer-information, .footer-copyright { max-width: 48rem; margin-right: auto; margin-left: auto; color: rgba(255,255,255,0.7); font-size: 0.85rem; }
+    .footer-theme { margin-bottom: 1.5rem; color: rgba(255,255,255,0.9); font-family: var(--font-serif); font-style: italic; }
+    .footer-information, .footer-copyright { max-width: 48rem; margin-right: auto; margin-left: auto; color: rgba(255,255,255,0.8); font-size: 0.85rem; }
     .footer-copyright { margin-top: 1.5rem; margin-bottom: 0; }
 
     /* Voltar ao topo */
@@ -590,7 +589,6 @@
     <!-- Início -->
     <section id="inicio" class="hero" aria-labelledby="heroTitle">
       <picture class="hero-picture">
-        <!-- Certifique-se de que o caminho da imagem está correto -->
         <img src="capa-kero-deus.jpg" alt="Capa do Kero Deus" width="1024" height="704" fetchpriority="high" decoding="async">
       </picture>
       <div class="hero-overlay" aria-hidden="true"></div>
