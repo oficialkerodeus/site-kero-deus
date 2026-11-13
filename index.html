@@ -33,9 +33,9 @@
       /* Paleta expandida com azul */
       --bg-paper: #f2f0eb; 
       --bg-paper-dark: #e8e5df;
-      --blue-soft: #eef2ff; /* Fundo azulado suave para seções */
+      --blue-soft: #eef2ff; 
       
-      --blue-primary: #0021db; /* Azul Royal */
+      --blue-primary: #0021db; 
       --blue-hover: #0018a8;
       --blue-dark: #00148a;
       
@@ -97,7 +97,6 @@
 
     .section-header { max-width: 48rem; margin: 0 auto 3rem; text-align: center; }
 
-    /* Etiquetas agora com fundo azul sólido */
     .section-label {
       display: inline-flex;
       align-items: center;
@@ -203,41 +202,75 @@
     .button-outline { border-color: var(--blue-primary); color: var(--blue-primary); background: transparent; }
     .button-outline:hover { background: var(--blue-primary); color: var(--white); }
 
-    /* Hero */
+    /* =========================================
+       HERO COM EFEITO DE CÉU ESTRELADO SUAVE
+       ========================================= */
     .hero {
-      position: relative; min-height: max(45rem, 100svh);
-      display: grid; place-items: center; overflow: hidden;
-      background: var(--bg-paper); isolation: isolate;
+      position: relative; 
+      min-height: max(45rem, 100svh);
+      display: grid; 
+      place-items: center; 
+      overflow: hidden;
+      background: var(--bg-paper); 
+      isolation: isolate;
       padding-top: var(--header-height);
     }
 
     .hero-picture, .hero-picture img, .hero-overlay {
       position: absolute; inset: 0; width: 100%; height: 100%;
     }
+    
     .hero-picture { z-index: -4; }
     .hero-picture img { object-fit: cover; object-position: center; }
 
-    /* Overlay com toque sutil de azul */
+    /* Sobreposição azulada bem suave e desfoque */
     .hero-overlay {
       z-index: -3;
       background: linear-gradient(
         135deg,
-        rgb(242 240 235 / 0.92),
-        rgb(238 242 255 / 0.85) 50%,
-        rgb(242 240 235 / 0.92)
+        rgba(238, 242, 255, 0.92), /* Azul bem clarinho */
+        rgba(230, 240, 255, 0.88) 50%,
+        rgba(238, 242, 255, 0.95)
       );
-      backdrop-filter: blur(4px);
+      backdrop-filter: blur(6px); /* Desfoque para a imagem virar um fundo abstrato */
     }
 
+    /* Efeito de Céu Estrelado (CSS Puro) */
+    .hero::after {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      content: "";
+      background-image: 
+        radial-gradient(1.5px 1.5px at 10% 20%, rgba(0, 33, 219, 0.4) 50%, transparent 100%),
+        radial-gradient(1px 1px at 30% 60%, rgba(255, 255, 255, 0.9) 50%, transparent 100%),
+        radial-gradient(2px 2px at 70% 30%, rgba(0, 33, 219, 0.3) 50%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 90% 80%, rgba(255, 255, 255, 0.8) 50%, transparent 100%),
+        radial-gradient(1px 1px at 50% 10%, rgba(0, 33, 219, 0.5) 50%, transparent 100%),
+        radial-gradient(2px 2px at 20% 90%, rgba(255, 255, 255, 0.7) 50%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 80% 50%, rgba(175, 194, 221, 0.8) 50%, transparent 100%);
+      background-repeat: repeat;
+      background-size: 350px 350px;
+      opacity: 0.7;
+      animation: twinkle 5s infinite alternate ease-in-out;
+    }
+
+    /* Textura quadriculada sutil no fundo */
     .hero::before {
       position: absolute; inset: 0; z-index: -2;
       background-image: 
         linear-gradient(90deg, var(--blue-primary) 1px, transparent 1px),
         linear-gradient(var(--blue-primary) 1px, transparent 1px);
       background-size: 40px 40px;
-      content: ""; opacity: 0.05;
+      content: ""; opacity: 0.03;
       mask-image: radial-gradient(circle at center, black, transparent 80%);
       -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
+    }
+
+    /* Animação das estrelas */
+    @keyframes twinkle {
+      0% { opacity: 0.5; transform: scale(1); }
+      100% { opacity: 0.9; transform: scale(1.02); }
     }
 
     .hero-content {
@@ -249,30 +282,34 @@
 
     .marian-symbol {
       width: clamp(5.5rem, 9vw, 7rem); height: auto; margin: 0 auto 1rem;
-      object-fit: contain; filter: drop-shadow(0 10px 15px rgb(0 33 219 / 0.2));
+      object-fit: contain; filter: drop-shadow(0 10px 20px rgba(0, 33, 219, 0.25));
     }
 
     .edition-badge {
       display: inline-flex; margin-bottom: 1rem; padding: 0.4rem 1rem;
       border: 1px solid var(--blue-primary); border-radius: 999px;
-      background: var(--blue-primary); color: var(--white); font-size: 0.8rem;
+      background: var(--white); color: var(--blue-primary); font-size: 0.8rem;
       font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      box-shadow: 0 4px 10px rgba(0, 33, 219, 0.1);
     }
 
+    /* Título Caligráfico com brilho para destacar do fundo estrelado */
     .hero h1 {
       margin-bottom: -1rem;
       font-family: var(--font-script);
       font-size: clamp(6rem, 18vw, 12rem);
       font-weight: 400; line-height: 0.8;
       color: var(--blue-primary); letter-spacing: 0;
-      text-shadow: 2px 4px 10px rgba(0,33,219,0.1);
+      text-shadow: 
+        0 0 20px rgba(255, 255, 255, 0.9),
+        0 10px 20px rgba(0, 33, 219, 0.15);
     }
 
     /* Painel de Lançamento */
     .launch-panel {
       max-width: 44rem; margin: 2rem auto 0; padding: clamp(1.5rem, 4vw, 2.5rem);
       border: 2px solid var(--blue-primary); border-radius: var(--radius-medium);
-      background: var(--white); box-shadow: var(--shadow-large);
+      background: rgba(255, 255, 255, 0.95); box-shadow: var(--shadow-large);
       position: relative;
     }
 
@@ -304,6 +341,7 @@
       max-width: 40rem; margin: 0 auto 1.5rem; color: var(--blue-primary);
       font-family: var(--font-serif); font-size: clamp(1.6rem, 4vw, 2.8rem);
       font-weight: 800; line-height: 1.1; text-transform: uppercase;
+      text-shadow: 0 2px 10px rgba(255, 255, 255, 0.8);
     }
 
     .hero-date { margin-bottom: 2rem; color: var(--black-deep); font-family: var(--font-serif); font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-weight: 600; letter-spacing: 0.1em; }
@@ -311,7 +349,7 @@
     .countdown-panel {
       max-width: 38rem; margin: 0 auto; padding: 1.5rem;
       border: 2px solid var(--blue-primary); border-radius: var(--radius-large);
-      background: var(--blue-soft); box-shadow: var(--shadow-small);
+      background: var(--white); box-shadow: var(--shadow-medium);
     }
     .countdown-label { display: block; margin-bottom: 0.5rem; color: var(--blue-dark); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
     .countdown { color: var(--blue-primary); font-family: var(--font-serif); font-size: clamp(1.4rem, 4vw, 2.5rem); font-weight: 800; font-variant-numeric: tabular-nums; }
